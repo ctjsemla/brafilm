@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import AdBanners from '../components/AdBanners'
 import MovieRow from '../components/MovieRow'
 import RankList from '../components/RankList'
 import Footer from '../components/Footer'
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="home-layout">
         <div className="home-main">
           <MovieRow title="Lançamentos" items={lancamentos} seeAllLink="/filmes" />
+          <AdBanners />
           <MovieRow title="Populares" items={populares} seeAllLink="/filmes" />
           <MovieRow title="Séries em Alta" items={seriesEmAlta} seeAllLink="/series" seeAllLabel="VER TODAS" />
           <section className="home-mobile-rank">
