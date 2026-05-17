@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import AuthModal from './components/AuthModal'
+import NewReleasePopup from './components/NewReleasePopup'
 import TelegramFab from './components/TelegramFab'
 import MobileNav from './components/MobileNav'
 import SideMenu from './components/SideMenu'
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/:type/:slug" element={<ContentPage />} />
         </Routes>
       </main>
+      <NewReleasePopup />
       <AuthModal />
       <TelegramFab />
       <MobileNav onMenuOpen={() => setMenuOpen(true)} />

@@ -3,6 +3,12 @@
   align-items: flex-start;
 }
 
+@media (max-width: 1023px) {
+  .home-layout {
+    padding-top: 0;
+  }
+}
+
 .home-main {
   flex: 1;
   min-width: 0;

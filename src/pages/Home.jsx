@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <AdBanners />
       <div className="home-layout">
         <div className="home-main">
           <MovieRow title="Lançamentos" items={lancamentos} seeAllLink="/filmes" />
-          <AdBanners />
           <MovieRow title="Populares" items={populares} seeAllLink="/filmes" />
           <MovieRow title="Séries em Alta" items={seriesEmAlta} seeAllLink="/series" seeAllLabel="VER TODAS" />
           <section className="home-mobile-rank">

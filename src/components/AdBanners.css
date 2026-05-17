@@ -84,8 +84,11 @@
 /* Mobil + tablet: 2×2 grid — tüm bannerlar görünür, kaydırma gerekmez */
 @media (max-width: 1023px) {
   .ad-banners.row {
+    padding-top: 0.35rem;
+    padding-bottom: 0.85rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: -0.25rem;
   }
 
   .ad-banners__viewport {
