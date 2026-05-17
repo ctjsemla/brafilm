@@ -1,0 +1,13 @@
+---
+description: Always implement and verify web (desktop) and mobile layouts together
+globs: **/*
+alwaysApply: true
+---
+
+When changing UI, layout, banners, navigation, or pages:
+
+- Design and test for **mobile (≤1023px)** and **desktop (≥1024px)** in the same change.
+- Prefer responsive CSS (grid/flex breakpoints) over separate hacks.
+- Avoid horizontal-only patterns on mobile unless scroll is obvious; use 2-column grids when items are small (e.g. 234×60 banners).
+- Check touch targets, safe areas, fixed bottom nav padding, and `overflow` clipping on small screens.
+- Ensure static assets under `public/` exist for both environments (run `npm run predev` / ensure scripts if needed).

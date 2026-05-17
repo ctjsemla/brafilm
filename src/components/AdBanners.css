@@ -1,8 +1,11 @@
-/* Yatay şerit — MovieRow ile aynı padding/rhythm */
+/* Patrocínios — desktop: yatay kaydırma | mobil: 2×2 grid */
 .ad-banners.row {
   padding-top: 0;
   padding-bottom: 1.25rem;
-  z-index: 10;
+  position: relative;
+  z-index: 15;
+  width: 100%;
+  overflow: visible;
 }
 
 .ad-banners__header {
@@ -10,7 +13,8 @@
 }
 
 .ad-banners__viewport {
-  overflow: hidden;
+  width: 100%;
+  overflow: visible;
 }
 
 .ad-banners__track {
@@ -21,6 +25,7 @@
   padding: 0.15rem 0.25rem 0.35rem;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 
 .ad-banners__track::-webkit-scrollbar {
@@ -31,6 +36,7 @@
   position: relative;
   flex: 0 0 234px;
   width: 234px;
+  min-height: 60px;
   border-radius: 10px;
   overflow: hidden;
   background: var(--bg-card);
@@ -69,8 +75,44 @@
 .ad-banners__gif {
   width: 100%;
   height: auto;
+  min-height: 60px;
   display: block;
-  vertical-align: middle;
+  object-fit: cover;
+  aspect-ratio: 234 / 60;
+}
+
+/* Mobil + tablet: 2×2 grid — tüm bannerlar görünür, kaydırma gerekmez */
+@media (max-width: 1023px) {
+  .ad-banners.row {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ad-banners__viewport {
+    overflow: visible;
+  }
+
+  .ad-banners__track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+    overflow-x: visible;
+    overflow-y: visible;
+    scroll-snap-type: none;
+    padding: 0;
+  }
+
+  .ad-banners__slot {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    scroll-snap-align: unset;
+  }
+
+  .ad-banners__gif {
+    min-height: 52px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -83,9 +125,13 @@
   }
 }
 
-@media (max-width: 600px) {
-  .ad-banners__slot {
-    flex: 0 0 min(234px, calc(100vw - 2.5rem));
-    width: min(234px, calc(100vw - 2.5rem));
+@media (max-width: 380px) {
+  .ad-banners__track {
+    gap: 0.4rem;
+  }
+
+  .ad-banners__ads-tag {
+    font-size: 0.44rem;
+    padding: 1px 4px;
   }
 }

@@ -25,7 +25,8 @@ function BannerSlot({ banner }) {
         className="ad-banners__gif"
         width={banner.width}
         height={banner.height}
-        loading="lazy"
+        loading={banner.id <= 2 ? 'eager' : 'lazy'}
+        decoding="async"
       />
     </a>
   )
