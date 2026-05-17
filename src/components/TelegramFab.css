@@ -1,0 +1,42 @@
+.telegram-fab {
+  position: fixed;
+  bottom: 5.25rem;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(20, 20, 20, 0.92);
+  border: 1px solid #ffffff1a;
+  color: #5eb3f6;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+.telegram-fab svg {
+  color: var(--telegram);
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .telegram-fab {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    transform: none;
+    background: var(--telegram);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.65rem 1.1rem;
+    border: none;
+  }
+
+  .telegram-fab svg {
+    color: #fff;
+  }
+}

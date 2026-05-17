@@ -1,0 +1,38 @@
+SUPERFLIX — VİBE CODING İÇİN EN KOLAY BAŞLANGIÇ
+==============================================
+
+Sorun: localhost:5173 açılmıyor çünkü bilgisayarında npm yok ve sunucu hiç başlamadı.
+Bu normal — terminal kurulumu herkesin işi değil.
+
+
+YOL 1 — ŞİMDİ GÖR (npm YOK, 30 saniye)
+--------------------------------------
+1. Finder'da şu klasöre git:
+   Belgeler → firstproject → basit
+
+2. "index.html" dosyasına ÇİFT TIKLA
+   → Safari veya Chrome'da site açılır.
+
+3. REGISTRAR'a bas, herhangi bir e-posta yaz, kayıt ol.
+   ASSISTIR AGORA ancak kayıttan sonra çalışır (orijinal site gibi).
+
+
+YOL 2 — TAM PROJE (React, localhost:5173)
+-----------------------------------------
+1. Tarayıcıda aç: https://nodejs.org
+2. "LTS" indir, kur (İleri → İleri).
+3. Cursor'da yeni terminal aç ve yaz:
+
+   cd ~/Documents/firstproject
+   npm install
+   npm run dev
+
+4. Terminalde yazan adresi aç (genelde http://localhost:5173)
+
+
+Hangisini kullanmalıyım?
+- Sadece tasarımı görmek / vibe: YOL 1 (basit/index.html)
+- Tam site geliştirmek: YOL 2 (Node kur)
+
+
+Takılırsan Cursor'a yaz: "basit sürümü açamıyorum" veya "npm kurulumu".

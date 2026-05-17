@@ -1,0 +1,53 @@
+.footer {
+  padding: 2rem 1rem 6.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 0.5rem;
+}
+
+.footer__destaque h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer__bar {
+  width: 4px;
+  height: 1.1em;
+  background: var(--yellow);
+  border-radius: 2px;
+}
+
+.footer__destaque p {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+  max-width: 900px;
+}
+
+.footer__bottom {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer__logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.footer__film {
+  color: var(--accent);
+}
+
+.footer__copy {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 2.5rem 2.5rem 3rem;
+  }
+}

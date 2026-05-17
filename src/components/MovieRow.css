@@ -1,0 +1,119 @@
+.row {
+  padding: 0 1rem 1.75rem;
+  position: relative;
+  z-index: 10;
+}
+
+.row__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  padding: 0 0.25rem;
+}
+
+.row__title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.row__bar {
+  display: inline-block;
+  width: 4px;
+  height: 1.15em;
+  background: var(--yellow);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.row__see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.row__viewport {
+  position: relative;
+}
+
+.row__scroll {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 0.75rem;
+}
+
+.row__scroll > .card {
+  min-width: 0;
+}
+
+.row__arrow {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .row {
+    padding: 0 2.5rem 2rem;
+  }
+
+  .row__title {
+    font-size: 1.25rem;
+  }
+
+  .row__scroll {
+    display: flex;
+    gap: 0.85rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    grid-template-columns: unset;
+  }
+
+  .row__scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .row__scroll > .card {
+    flex: 0 0 165px;
+    width: 165px;
+  }
+
+  .row__arrow {
+    display: flex;
+    position: absolute;
+    top: 38%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid #ffffff33;
+    color: #fff;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .row__viewport:hover .row__arrow {
+    opacity: 1;
+  }
+
+  .row__arrow--left {
+    left: -0.5rem;
+  }
+
+  .row__arrow--right {
+    right: -0.5rem;
+  }
+}

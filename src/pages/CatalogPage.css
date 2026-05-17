@@ -1,0 +1,47 @@
+.catalog {
+  min-height: calc(100vh - var(--header-h));
+}
+
+.catalog__hero {
+  padding: 1.5rem 1rem 1rem;
+}
+
+.catalog__hero h1 {
+  font-size: clamp(1.35rem, 5vw, 2.25rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.catalog__hero p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 0.75rem;
+  padding: 0 1rem 6rem;
+}
+
+.catalog__grid .card {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .catalog__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0 2rem 3rem;
+  }
+
+  .catalog__hero {
+    padding: 2rem 2rem 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .catalog__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

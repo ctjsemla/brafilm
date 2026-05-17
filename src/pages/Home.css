@@ -1,0 +1,21 @@
+.home-layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.home-main {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (min-width: 1100px) {
+  .home-mobile-rank {
+    display: none;
+  }
+}
+
+@media (max-width: 1099px) {
+  .home-layout {
+    display: block;
+  }
+}
