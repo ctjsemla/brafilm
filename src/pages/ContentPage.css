@@ -151,18 +151,137 @@
   margin: 1.5rem auto 1rem;
 }
 
-.content-page__cta .btn-watch {
+.content-page--watch {
+  padding: 0 0 6rem;
+}
+
+.content-page__player-wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.content-page__watch-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 0;
+}
+
+.content-page__watch-head {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  background: linear-gradient(135deg, #22c55e, #15803d);
+  gap: 1rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.content-page__poster-thumb {
+  width: 88px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.content-page__watch-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.content-page__watch-meta h1 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.content-page__type {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.content-page__live {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: var(--accent);
   color: #000;
-  font-weight: 700;
-  padding: 0.85rem;
+}
+
+.content-page__cta--active .btn-list {
+  background: #ffffff1a;
+  border: 1px solid #fff3;
+  padding: 0.85rem 1.25rem;
   border-radius: 999px;
-  opacity: 0.55;
-  cursor: not-allowed;
+  font-weight: 600;
+  font-size: 0.88rem;
+  width: 100%;
+  max-width: 280px;
+}
+
+.content-page__more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.content-page__watch-inner .content-page__desc {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.content-page__watch-inner .content-page__cta {
+  margin: 1.25rem 0 0;
+  max-width: none;
+  align-items: flex-start;
+}
+
+.content-page__watch-inner .content-page__back {
+  display: inline-block;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .content-page__poster-thumb {
+    display: block;
+    width: 110px;
+  }
+
+  .content-page__watch-meta h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .content-page--watch {
+    padding-bottom: max(6rem, calc(5.5rem + env(safe-area-inset-bottom)));
+  }
+
+  .content-page__player-wrap {
+    max-width: none;
+  }
+
+  .content-page__watch-inner {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-page__player-wrap {
+    padding: 0 2rem;
+  }
+
+  .content-page__watch-inner {
+    padding: 1.5rem 2rem 0;
+  }
 }
 
 .content-page__cta .btn-list {

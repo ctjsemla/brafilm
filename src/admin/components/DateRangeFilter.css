@@ -1,0 +1,71 @@
+.date-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.date-filter__presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.date-filter__pill {
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #141414;
+  min-height: 40px;
+}
+
+.date-filter__pill--active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+
+.date-filter__calendar {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.date-filter__calendar label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.date-filter__calendar input {
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0a0a0a;
+  color: #fff;
+  font-size: 1rem;
+  min-height: 44px;
+}
+
+.date-filter__apply {
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  min-height: 44px;
+}
+
+@media (min-width: 1024px) {
+  .date-filter__calendar {
+    grid-template-columns: 1fr 1fr auto;
+    align-items: end;
+  }
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import AdminApp from './admin/AdminApp.jsx'
 import Header from './components/Header'
 import AuthModal from './components/AuthModal'
 import NewReleasePopup from './components/NewReleasePopup'
@@ -15,6 +16,16 @@ import './App.css'
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+  const isAdmin = location.pathname.startsWith('/admin')
+
+  if (isAdmin) {
+    return (
+      <Routes>
+        <Route path="/admin/*" element={<AdminApp />} />
+      </Routes>
+    )
+  }
 
   return (
     <div className="app">
